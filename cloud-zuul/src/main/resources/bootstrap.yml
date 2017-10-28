@@ -7,5 +7,5 @@ spring:
       label: master
       discovery:
         service-id: cloud-config
-      username: kaze
+      username: config
       password: 123456
