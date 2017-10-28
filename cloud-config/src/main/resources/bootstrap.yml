@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://gitee.com/blickwinkel/spring-cloud
+          uri: https://github.com/kasuganokaze/spring-cloud
           search-paths: config-properties
           username:
           password:
