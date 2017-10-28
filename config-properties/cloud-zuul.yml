@@ -6,3 +6,12 @@ eureka:
       defaultZone: http://kaze:123456@127.0.0.1:8761/eureka/
   instance:
       instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+ribbon:
+  eureka:
+    enabled: false
+cloud-web:
+  ribbon:
+    listOfServers: 127.0.0.1:8080
+cloud-amqp:
+  ribbon:
+    listOfServers: 127.0.0.1:8180
