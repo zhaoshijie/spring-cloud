@@ -11,12 +11,6 @@ spring:
           search-paths: config-properties
           username:
           password:
-security:
-  basic:
-    enabled: true
-  user:
-    name: config
-    password: 123456
 eureka:
   client:
     service-url:
