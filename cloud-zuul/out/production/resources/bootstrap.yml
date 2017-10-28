@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: cloud-zuul
+  cloud:
+    config:
+      profile: default
+      label: master
+      discovery:
+        service-id: cloud-config
+      username: kaze
+      password: 123456

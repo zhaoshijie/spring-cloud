@@ -1,0 +1,25 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/blickwinkel/spring-cloud
+          search-paths: config-properties
+          username:
+          password:
+security:
+  basic:
+    enabled: true
+  user:
+    name: kaze
+    password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://kaze:123456@127.0.0.1:8761/eureka/
+  instance:
+      instance-id: ${spring.cloud.client.ipAddress}:${server.port}
