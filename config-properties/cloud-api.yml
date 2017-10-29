@@ -41,7 +41,7 @@ spring:
       url: http://127.0.0.1:8090
 management:
   security:
-    enabled: true
+    enabled: false
 mybatis:
   type-aliases-package: com.api.domain
   mapper-locations: classpath:mapper/*Mapper.xml
