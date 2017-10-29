@@ -9,7 +9,7 @@ eureka:
 ribbon:
   eureka:
     enabled: false
-cloud-web:
+cloud-api:
   ribbon:
     listOfServers: 127.0.0.1:8080
 cloud-amqp:
