@@ -7,4 +7,4 @@ eureka:
     status-page-url-path: /turbine.stream
 turbine:
   app-config: cloud-api
-  cluster-name-expression: new String("default")
+  cluster-name-expression: "'default'"
