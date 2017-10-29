@@ -7,6 +7,4 @@ eureka:
     status-page-url-path: /turbine.stream
 turbine:
   app-config: cloud-api,cloud-api-amqp
-  cluster:
-    name:
-      expression: "default"
+  cluster-name-expression: new String("default")
