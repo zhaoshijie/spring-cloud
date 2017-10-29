@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cloud-zipkin
+    name: cloud-api-amqp
   cloud:
     config:
       profile: default
