@@ -14,7 +14,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
-group = 'com.zuul'
+group = 'com.zipkin'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
@@ -30,7 +30,8 @@ ext {
 dependencies {
 	compile('org.springframework.cloud:spring-cloud-starter-config')
 	compile('org.springframework.cloud:spring-cloud-starter-eureka')
-	compile('org.springframework.cloud:spring-cloud-starter-zuul')
+	compile('io.zipkin.java:zipkin-server')
+	compile('io.zipkin.java:zipkin-autoconfigure-ui')
 }
 
 dependencyManagement {
