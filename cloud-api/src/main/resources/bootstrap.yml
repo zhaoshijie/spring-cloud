@@ -4,8 +4,8 @@ spring:
   application:
     name: cloud-api
   cloud:
-      config:
-        profile: default
-        label: master
-        discovery:
-          service-id: cloud-config
+    config:
+      profile: default
+      label: master
+      discovery:
+        service-id: cloud-config
