@@ -8,7 +8,7 @@ eureka:
     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
     status-page-url-path: /turbine.stream
 turbine:
-  app-config: cloud-api,cloud-amqp
+  app-config: cloud-api,cloud-api-amqp
   cluster:
     name:
       expression: "default"

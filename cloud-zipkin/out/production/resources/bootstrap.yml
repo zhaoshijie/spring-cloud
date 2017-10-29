@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: cloud-zipkin
-  cloud:
-    config:
-      profile: default
-      label: master
-      discovery:
-        service-id: cloud-config

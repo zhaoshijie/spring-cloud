@@ -12,6 +12,6 @@ ribbon:
 cloud-api:
   ribbon:
     listOfServers: 127.0.0.1:8080
-cloud-amqp:
+cloud-api-amqp:
   ribbon:
     listOfServers: 127.0.0.1:8180
