@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 /**
  * @author kaze 2017/10/29
  */
-@FeignClient(name = "cloud-amqp", configuration = FeignClientConfig.class, fallbackFactory = AmqpFeignClientFallbackFactory.class)
+@FeignClient(name = "cloud-api-amqp", configuration = FeignClientConfig.class, fallbackFactory = AmqpFeignClientFallbackFactory.class)
 public interface AmqpFeignClient {
 
     /**

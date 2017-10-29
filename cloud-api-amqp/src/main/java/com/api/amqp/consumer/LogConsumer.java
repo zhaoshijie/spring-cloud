@@ -55,7 +55,7 @@ public class LogConsumer {
         systemLog.setServerIp(String.valueOf(json.get("serverIp")));
         systemLog.setDetail(String.valueOf(json.get("detail")));
         systemLog.setUserAgent(String.valueOf(json.get("userAgent")));
-        systemLogService.save(systemLog);
+//        systemLogService.save(systemLog);
         logger.info("收到信息：{}", json);
     }
 
