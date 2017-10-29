@@ -18,3 +18,9 @@ spring:
   zipkin:
     service:
       name: ${spring.application.name}
+  boot:
+    admin:
+      url: http://127.0.0.1:8090
+management:
+  security:
+    enabled: true

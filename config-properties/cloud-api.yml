@@ -38,11 +38,10 @@ spring:
       name: ${spring.application.name}
   boot:
     admin:
-      client:
-        service-url: http://127.0.0.1:${server.port}
+      url: http://127.0.0.1:8090
 management:
   security:
-    enabled: false
+    enabled: true
 mybatis:
   type-aliases-package: com.api.domain
   mapper-locations: classpath:mapper/*Mapper.xml
