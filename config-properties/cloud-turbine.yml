@@ -9,3 +9,6 @@ turbine:
   app-config: cloud-api
   cluster-name-expression: "'default'"
   combine-host-port: true
+management:
+  security:
+    enabled: false
