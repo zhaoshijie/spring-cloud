@@ -7,4 +7,4 @@ eureka:
     status-page-url-path: /
 management:
   security:
-    enabled: true
+    enabled: false
