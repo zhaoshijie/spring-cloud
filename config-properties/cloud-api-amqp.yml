@@ -17,4 +17,4 @@ spring:
       uri: mongodb://kaze:123456@127.0.0.1:27017/kaze
   zipkin:
     service:
-      name: cloud-api-amqp
+      name: ${spring.application.name}
