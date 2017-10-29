@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cloud-web
+    name: cloud-api
   cloud:
       config:
         profile: default
