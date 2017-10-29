@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: cloud-api-amqp
-  cloud:
-    config:
-      profile: default
-      label: master
-      discovery:
-        service-id: cloud-config
