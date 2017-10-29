@@ -1,6 +1,8 @@
+server:
+  port: 9411
 spring:
   application:
-    name: cloud-api
+    name: cloud-zipkin
   cloud:
       config:
         profile: default
