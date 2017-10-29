@@ -40,6 +40,7 @@ dependencies {
 	compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.1')
 	compile('com.github.pagehelper:pagehelper-spring-boot-starter:1.2.3')
 	compile('tk.mybatis:mapper-spring-boot-starter:1.1.4')
+	compile('de.codecentric:spring-boot-admin-starter-client:1.5.4')
 	compile('mysql:mysql-connector-java')
 	compile('com.alibaba:druid:1.0.31')
 	compile('com.alibaba:fastjson:1.2.38')
