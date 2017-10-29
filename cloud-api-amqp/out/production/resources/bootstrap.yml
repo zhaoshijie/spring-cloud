@@ -1,8 +1,8 @@
 server:
-  port: 8090
+  port: 8180
 spring:
   application:
-    name: cloud-admin
+    name: cloud-api-amqp
   cloud:
     config:
       profile: default
