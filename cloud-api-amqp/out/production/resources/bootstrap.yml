@@ -9,6 +9,3 @@ spring:
       label: master
       discovery:
         service-id: cloud-config
-  sleuth:
-    sampler:
-      percentage: 1
