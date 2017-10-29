@@ -13,3 +13,6 @@ cloud-api:
 cloud-api-amqp:
   ribbon:
     listOfServers: 127.0.0.1:8180
+management:
+  security:
+    enabled: false
