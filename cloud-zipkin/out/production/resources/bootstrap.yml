@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cloud-zuul
+    name: cloud-zipkin
   cloud:
     config:
       profile: default
