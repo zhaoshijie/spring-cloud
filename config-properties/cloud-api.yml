@@ -33,6 +33,8 @@ spring:
       max-wait: -1
     timeout: 0
     expireSeconds: 1800
+  zipkin:
+    base-url: http://127.0.0.1:9411
 mybatis:
   type-aliases-package: com.api.domain
   mapper-locations: classpath:mapper/*Mapper.xml
