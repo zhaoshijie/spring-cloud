@@ -39,7 +39,7 @@ spring:
   boot:
     admin:
       client:
-        name: ${spring.application.name}
+        service-url: http://127.0.0.1:${server.port}
 management:
   security:
     enabled: false
