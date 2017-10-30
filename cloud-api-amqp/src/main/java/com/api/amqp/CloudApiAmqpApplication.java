@@ -1,14 +1,12 @@
 package com.api.amqp;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.client.SpringCloudApplication;
 
 /**
  * @author kaze 2017/10/29
  */
-@SpringBootApplication
-@EnableEurekaClient
+@SpringCloudApplication
 public class CloudApiAmqpApplication {
 
 	public static void main(String[] args) {
