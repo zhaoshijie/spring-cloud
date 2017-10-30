@@ -13,6 +13,8 @@ turbine:
 spring:
   boot:
     admin:
+      turbine:
+        location: ${spring.application.name}
       routes:
         endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream,turbine.stream
 management:
