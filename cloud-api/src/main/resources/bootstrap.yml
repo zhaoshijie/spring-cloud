@@ -9,6 +9,3 @@ spring:
       label: master
       discovery:
         service-id: cloud-config
-  boot:
-    admin:
-      url: http://localhost:8090
