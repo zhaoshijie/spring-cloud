@@ -34,9 +34,6 @@ spring:
       max-wait: -1
     timeout: 0
     expireSeconds: 1800
-  zipkin:
-    service:
-      name: ${spring.application.name}
 mybatis:
   type-aliases-package: com.api.domain
   mapper-locations: classpath:mapper/*Mapper.xml
