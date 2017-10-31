@@ -16,4 +16,4 @@ cloud-api-amqp:
     listOfServers: 127.0.0.1:8180
 management:
   security:
-    enabled: false
+    enabled: true

@@ -11,6 +11,8 @@ spring:
           search-paths: config-properties
           username:
           password:
+        overrides:
+          management.security.enabled: false
 eureka:
   client:
     service-url:
