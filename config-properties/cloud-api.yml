@@ -3,8 +3,8 @@ eureka:
     service-url:
       defaultZone: http://eureka:123456@127.0.0.1:8761/eureka/
   instance:
-    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
     prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
     status-page-url-path: /swagger-ui.html
 spring:
   datasource:
@@ -47,8 +47,6 @@ pagehelper:
   reasonable: true
   support-methods-arguments: true
   params: count=countSql
-logging:
-  config: classpath:logback.xml
 feign:
   hystrix:
     enabled: true
@@ -59,6 +57,8 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 5000
+logging:
+  config: classpath:logback.xml
 management:
   security:
     enabled: false

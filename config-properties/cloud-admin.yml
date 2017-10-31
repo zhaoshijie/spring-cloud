@@ -3,13 +3,9 @@ eureka:
     service-url:
       defaultZone: http://eureka:123456@127.0.0.1:8761/eureka/
   instance:
-    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
     prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
     status-page-url-path: /
-turbine:
-  app-config: cloud-api
-  cluster-name-expression: "'default'"
-  combine-host-port: true
 spring:
   boot:
     admin:
@@ -17,6 +13,10 @@ spring:
         location: ${spring.application.name}
       routes:
         endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream,turbine.stream
+turbine:
+  app-config: cloud-api
+  cluster-name-expression: "'default'"
+  combine-host-port: true
 management:
   security:
     enabled: false

@@ -10,8 +10,8 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
  * @author kaze 2017/10/29
  */
 @SpringCloudApplication
-@ServletComponentScan
 @EnableFeignClients
+@ServletComponentScan
 @MapperScan("com.api.mapper")
 public class CloudApiApplication {
 
