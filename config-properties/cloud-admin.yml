@@ -1,5 +1,6 @@
 eureka:
   instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
     status-page-url-path: /
 spring:
   boot:
