@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 @Component
 public class AccessFilter extends ZuulFilter {
 
+    private final String post = "post";
+    private final String login = "/login";
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override
@@ -36,6 +38,12 @@ public class AccessFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         logger.info("send {} request to {}", request.getMethod(), request.getRequestURL());
+        String method = request.getMethod();
+        String uri = request.getRequestURI();
+        //如果是登录操作，则不判断是否有token
+        if (post.equals(method.toLowerCase()) && uri.endsWith(login)) {
+            return null;
+        }
         Object accessToken = request.getParameter("accessToken");
         if (accessToken == null) {
             logger.warn("access token is empty");
