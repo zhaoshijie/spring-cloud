@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 @Component
 public class AccessFilter extends ZuulFilter {
 
-    private final String post = "post";
-    private final String login = "/login";
+    private static final String POST = "post";
+    private static final String URI = "/login";
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override
@@ -41,7 +41,7 @@ public class AccessFilter extends ZuulFilter {
         String method = request.getMethod();
         String uri = request.getRequestURI();
         //如果是登录操作，则不判断是否有token
-        if (post.equals(method.toLowerCase()) && uri.endsWith(login)) {
+        if (POST.equals(method.toLowerCase()) && uri.endsWith(URI)) {
             return null;
         }
         Object accessToken = request.getParameter("accessToken");

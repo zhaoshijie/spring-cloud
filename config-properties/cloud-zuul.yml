@@ -7,3 +7,9 @@ ribbon:
 cloud-api:
   ribbon:
     listOfServers: 127.0.0.1:8080
+cloud-api-amqp:
+  ribbon:
+    listOfServers: 127.0.0.1:8180
+logging:
+  level:
+    com.netflix: DEBUG
