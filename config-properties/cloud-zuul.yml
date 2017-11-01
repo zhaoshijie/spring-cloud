@@ -4,6 +4,11 @@ eureka:
 ribbon:
   eureka:
     enabled: false
+zuul:
+  routes:
+    api:
+      path: /api/**
+      service-id: cloud-api
 cloud-api:
   ribbon:
     listOfServers: 127.0.0.1:8080
