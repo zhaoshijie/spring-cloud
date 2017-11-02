@@ -2,6 +2,8 @@ package com.api.controller;
 
 import com.api.domain.SysUser;
 import com.api.service.SysUserService;
+import com.api.uitl.SHA256Util;
+import com.api.vo.ResponseResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -28,9 +30,15 @@ public class LoginController {
             @ApiImplicitParam(name = "password", value = "用户密码", required = true, paramType = "query", dataType = "String")
     })
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login(String username, String password) {
+    public ResponseResult login(String username, String password) {
         SysUser sysUser = sysUserService.findByUsername(username);
-        return "success";
+        if (sysUser == null) {
+            return new ResponseResult(201, "用户不存在", null);
+        }
+        if (!sysUser.getPassword().equals(SHA256Util.getSHA256StrJava(password))) {
+            return new ResponseResult(202, "密码错误", null);
+        }
+        return ResponseResult.ok();
     }
 
 }
