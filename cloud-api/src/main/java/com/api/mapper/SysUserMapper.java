@@ -8,4 +8,12 @@ import tk.mybatis.mapper.common.Mapper;
  */
 public interface SysUserMapper extends Mapper<SysUser> {
 
+    /**
+     * 根据登录名查找用户
+     *
+     * @param username 用户名
+     * @return SysUser
+     */
+    SysUser findByUsername(String username);
+
 }

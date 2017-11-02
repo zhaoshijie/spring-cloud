@@ -14,4 +14,11 @@
         from sys_user
     </select>
 
+    <select id="findByUsername" resultMap="resultMap" parameterType="String">
+        select id as id,
+        username as username,
+        password as password
+        from sys_user WHERE username = #{username}
+    </select>
+
 </mapper>
