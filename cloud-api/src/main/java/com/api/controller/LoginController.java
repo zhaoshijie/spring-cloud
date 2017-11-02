@@ -36,7 +36,7 @@ public class LoginController {
             return new ResponseResult(201, "用户不存在", null);
         }
         if (!sysUser.getPassword().equals(SHA256Util.getSHA256(password))) {
-            return new ResponseResult(202, "密码错误", null);
+            return new ResponseResult(201, "密码错误", null);
         }
         return ResponseResult.ok(sysUser);
     }
