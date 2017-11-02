@@ -7,7 +7,7 @@
         <result column="username" property="username"/>
     </resultMap>
 
-    <select id="findByUsername" resultMap="resultMap" parameterType="String">
+    <select id="findByUsername" resultType="com.api.domain.SysUser" parameterType="String">
         select su.id as id,
         su.username as username,
         su.password as password

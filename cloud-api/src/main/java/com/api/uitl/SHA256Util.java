@@ -12,7 +12,7 @@ public class SHA256Util {
      * 　　* @param str 加密后的报文
      * 　　* @return
      */
-    public static String getSHA256StrJava(String str) {
+    public static String getSHA256(String str) {
         MessageDigest messageDigest;
         String encodeStr = "";
         try {

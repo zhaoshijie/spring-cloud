@@ -24,7 +24,7 @@ public class LoginController {
     @Resource
     private SysUserService sysUserService;
 
-    @ApiOperation(value = "登录", notes = "登录")
+    @ApiOperation(value = "登录", notes = "登录验证")
     @ApiImplicitParams(value = {
             @ApiImplicitParam(name = "username", value = "用户名", required = true, paramType = "query", dataType = "String"),
             @ApiImplicitParam(name = "password", value = "用户密码", required = true, paramType = "query", dataType = "String")
@@ -35,10 +35,10 @@ public class LoginController {
         if (sysUser == null) {
             return new ResponseResult(201, "用户不存在", null);
         }
-        if (!sysUser.getPassword().equals(SHA256Util.getSHA256StrJava(password))) {
+        if (!sysUser.getPassword().equals(SHA256Util.getSHA256(password))) {
             return new ResponseResult(202, "密码错误", null);
         }
-        return ResponseResult.ok();
+        return ResponseResult.ok(sysUser);
     }
 
 }
